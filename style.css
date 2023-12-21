@@ -1,0 +1,52 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#webcam-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#captured-image-container {
+    width: 100%;
+    text-align: center;
+}
+
+#captured-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    margin: 10px;
+}
+
+#result-container {
+    text-align: center;
+    margin-top: 20px;
+}
+

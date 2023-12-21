@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Test</title>
+</head>
+<body>
+    <h1>Webcam Test</h1>
+    
+    <div id="webcam-container"></div>
+    
+    <button onclick="captureImage()">Capture Image</button>
+
+    <script>
+            navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var video = document.createElement('video');
+                video.srcObject = stream;
+                video.play();
+
+                document.getElementById('webcam-container').appendChild(video);
+            })
+            .catch(function (err) {
+                console.error('Error accessing webcam:', err);
+            });
+
+        function captureImage() {
+            var video = document.querySelector('video');
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var context = canvas.getContext('2d');
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            var imageDataURL = canvas.toDataURL('image/jpeg');
+            var capturedImage = new Image();
+            capturedImage.src = imageDataURL;
+            document.body.appendChild(capturedImage);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/webcamjs/1.0.25/webcam.min.js"></script>
+    <script src="main.js"></script>
+    <title>Face Recognition App</title>
+</head>
+<body>
+    <h1>Face Recognition App</h1>
+
+    <ul>
+        
+        <li>Dad</li>
+        <li>Mum</li>
+        <li>Brother</li>
+        <li>Sister</li>
+        <li>Me</li>
+        
+    </ul>
+
+    <div id="webcam-container">
+        
+    </div>
+
+    <div id="captured-image-container">
+        
+    </div>
+
+    <button class="btn btn-primary" onclick="captureImage()">Capture Image</button>
+    <button class="btn btn-success" onclick="identifyImage()">Identify Image</button>
+
+    <div id="result-container">
+        
+    </div>
+</body>
+</html>
